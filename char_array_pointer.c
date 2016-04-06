@@ -15,9 +15,9 @@ int main(){
       sum += *(class+i); // *(class+i) is equivalent to class[i]
   }
   printf("Sum=%d\n",sum);
-   scanf("%[^\n]s",pointers);
+   scanf("%[^\n]s",pointers); //delimiter is \n
    printf("%s\n",pointers);
-   scanf("%[^ ]s",pointers);
+   scanf("%[^ ]s",pointers); //delimiter is space
    printf("%s\n",pointers);
   return 0;
 }
