@@ -30,10 +30,11 @@ int main ()
      scanf ("%d", &input);
      count++;
 
-     more_numbers = (int*) realloc (numbers, count * sizeof(int));
+     //more_numbers = (int*) realloc (numbers, count * sizeof(int));
+     more_numbers =malloc(count * sizeof(int));
+     //more_numbers =(int*)malloc(count * sizeof(int));
      if (more_numbers!=NULL) {
        numbers=more_numbers;
-printf("number_pointer=%p\n",&numbers[count-1]);
        numbers[count-1]=input;
      }
      else {
@@ -44,7 +45,7 @@ printf("number_pointer=%p\n",&numbers[count-1]);
   } while (input!=0);
 
   printf ("Numbers entered: ");
-  for (n=0;n<count;n++) printf ("%d ",numbers[n]);
+  for (n=0;n<count;n++) printf ("%d and address=%p \n ",numbers[n],&numbers[n]);
   free (numbers);
 
   return 0;
